@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistem Insentif PAT</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/emoji.css@3.0.1@/emoji.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-title">
+                    <h2>Formulir Pengisian Insentif PAT</h2>
+                    <div id="welcomeMessage" class="welcome-text">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="user-info">
+                        <span class="user-role jabatan-badge badge bg-light text-dark">Admin</span>
+                    </div>
+                    <button id="logoutBtn" class="btn-logout">
+                        <span class="logout-icon">↪</span>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <form id="formPenilaian">
+            <div class="section form-section">
+                <div class="section-container">
+                    <h3>A. DIKNAS</h3>
+                    
+                    <div class="input-group">
+                        <label for="diknasMembuatSoal">Membuat Soal:</label>
+                        <input type="number" id="diknasMembuatSoal" name="diknasMembuatSoal" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="diknasKoreksi">Koreksi:</label>
+                        <input type="number" id="diknasKoreksi" name="diknasKoreksi" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <h3>B. LOKAL</h3>
+                    
+                    <div class="input-group">
+                        <label for="lokalMembuatSoal">Membuat Soal:</label>
+                        <input type="number" id="lokalMembuatSoal" name="lokalMembuatSoal" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lokalKoreksi">Koreksi:</label>
+                        <input type="number" id="lokalKoreksi" name="lokalKoreksi" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <h3>C. DINIYAH</h3>
+                    
+                    <div class="input-group">
+                        <label for="diniyahKoreksi">Koreksi:</label>
+                        <input type="number" id="diniyahKoreksi" name="diniyahKoreksi" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="diniyahRaport">Raport:</label>
+                        <input type="number" id="diniyahRaport" name="diniyahRaport" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <h3>D. Lain-lain</h3>
+                    
+                    <div class="input-group">
+                        <label for="lainEditorSoal">Editor Soal:</label>
+                        <input type="number" id="lainEditorSoal" name="lainEditorSoal" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lainRaportWalas">Raport Walas:</label>
+                        <input type="number" id="lainRaportWalas" name="lainRaportWalas" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lainMengawasUjian">Mengawas Ujian:</label>
+                        <input type="number" id="lainMengawasUjian" name="lainMengawasUjian" min="0" max="1000">
+                        <span class="validation-message"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn-primary">Submit</button>
+                    <button type="reset" id="resetBtn" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="messageContainer">
+            <div id="successMessage" class="message success" role="alert"></div>
+            <div id="errorMessage" class="message error" role="alert"></div>
+        </div>
+
+        <div id="adminSection" class="section admin-panel">
+            <div class="admin-controls">
+                <button id="ambilDataButton" class="btn-primary">Ambil Data</button>
+                <button id="exportExcel" class="btn-primary">Export Excel</button>
+                <button id="deleteAllData" class="btn-danger">Hapus Semua Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="tableData" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Guru</th>
+                            <th>Kategori</th>
+                            <th>Nilai</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

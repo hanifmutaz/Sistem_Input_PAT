@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistem Insentif PAT</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Logo Sekolah" class="school-logo">
+        </div>
+
+        <h2 class="text-center">Login Sistem Insentif PAT</h2>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="namaGuru">Nama Guru:</label>
+                <input type="text" id="namaGuru" name="namaGuru" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jabatan">Jabatan:</label>
+                <select id="jabatan" name="jabatan" required>
+                    <option value="">Pilih Jabatan</option>
+                    <option value="guru">Guru Mata Pelajaran</option>
+                    <option value="walas">Guru Wali Kelas</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-primary">Login</button>
+            </div>
+
+            <div id="loginError" class="message error" role="alert"></div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

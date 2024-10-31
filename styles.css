@@ -1,0 +1,352 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Container Styles */
+.login-container,
+.dashboard-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    padding: 2.5rem;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Header Styles */
+.dashboard-header {
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    animation: slideIn 0.5s ease-out;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header-title {
+    flex: 1;
+}
+
+.header-title h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-text {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-info {
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 2px solid #e9ecef;
+}
+
+.user-role {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #fff;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+}
+
+.logout-icon {
+    font-size: 1.2rem;
+    transform: rotate(-90deg);
+}
+
+/* Logo dan Header Styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.school-logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* Typography */
+h2 {
+    /* text-align: center; */
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #007bff;
+    font-size: 1.3em;
+    padding: 0.8rem;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+/* Form Elements */
+.form-group,
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+input.invalid {
+    border-color: #dc3545;
+}
+
+.validation-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+/* Messages */
+.message {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.message.error {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+}
+
+.message.success {
+    background-color: #f0fff4;
+    color: #276749;
+    border: 1px solid #9ae6b4;
+}
+
+/* Admin Panel */
+.admin-panel {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container,
+    .dashboard-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .admin-controls {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-danger {
+        width: 100%;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .school-logo {
+        width: 120px;
+    }
+
+    .data-table {
+        font-size: 0.9rem;
+    }
+}
